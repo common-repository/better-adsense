@@ -1,0 +1,135 @@
+.mba-plugin-container {
+	width:990px;
+	background-color:white;
+	padding:15px 15px 15px 15px;
+}
+
+.mba-left {
+	float:left;
+	width:635px;
+}
+
+.mba-right {
+	float:right;
+	width:300px;
+	height:450px;
+}
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css');
+
+.mba-plugin-container *, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.mba-plugin-container h1 {
+  font-weight: 400;
+  text-align: center;
+}
+
+.mba-plugin-container p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+.mba-plugin-container main {
+  min-width: 320px;
+  max-width: 950px;
+  #padding: 50px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.mba-plugin-container section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+.mba-plugin-container label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  #color: #bbb;
+  border: 1px solid transparent;
+}
+
+.mba-plugin-container input[type="radio"] {
+    display: none;
+}
+
+.mba-plugin-container label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+.mba-plugin-container input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid orange;
+  border-bottom: 1px solid #fff;
+}
+
+.mba-plugin-container #tab1:checked ~ #content1,
+.mba-plugin-container #tab2:checked ~ #content2,
+.mba-plugin-container #tab3:checked ~ #content3,
+.mba-plugin-container #tab4:checked ~ #content4 {
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+ .mba-plugin-container  label {
+    font-size: 0;
+  }
+ .mba-plugin-container  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mba-plugin-container label {
+    padding: 15px;
+  }
+}
+
+.mba-plugin-container div.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.mba-plugin-container div.accordion.active, div.accordion:hover {
+    background-color: #ddd;
+}
+
+.mba-plugin-container div.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.mba-plugin-container div.accordion.active:after {
+    content: "\2212";
+}
+
+.mba-plugin-container div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
